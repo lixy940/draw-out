@@ -98,10 +98,13 @@
 
     <build>
         <plugins>
-<!--            <plugin>
+            <!--spring-boot-maven-plugin打包的jar可直接运行 java -jar xxx.jar-->
+        <!--    <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>-->
+
+            <!--使用maven插件打包，生成的zip包，第一次直接使用zip,如果后面只是修改代码没有修改配置，可以直接替换jar包-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -120,7 +123,7 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <plugin>
+           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>

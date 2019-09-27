@@ -43,5 +43,17 @@ public class KafkaExampleController {
             logger.error("发送kafka失败", e);
         }
     }
+
+    @RequestMapping(value = "/send_3", method = RequestMethod.GET)
+    public void sendKafka_3(HttpServletRequest request) {
+        try {
+            String message = request.getParameter("message");
+            logger.info("kafka的消息={}", message);
+            kafkaTemplate.send("topic_3", message);
+            logger.info("发送kafka成功.");
+        } catch (Exception e) {
+            logger.error("发送kafka失败", e);
+        }
+    }
 }
 
