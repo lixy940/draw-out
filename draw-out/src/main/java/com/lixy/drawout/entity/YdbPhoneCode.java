@@ -7,8 +7,6 @@ import java.time.LocalDateTime;
  * Author：MR LIS，2019/9/19
  * Copyright(C) 2019 All rights reserved.
  */
-/*@Entity
-@Table(name = "ydb_phone_code_test", schema = "guiping")*/
 public class YdbPhoneCode implements Serializable {
 
     private Integer numId;
