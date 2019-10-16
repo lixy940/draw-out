@@ -55,5 +55,11 @@ public class KafkaExampleController {
             logger.error("发送kafka失败", e);
         }
     }
+
+    @RequestMapping(value = "/send_4", method = RequestMethod.GET)
+    public void sendKafka_4(){
+        String message = "";
+        kafkaTemplate.send("topic_3", message);
+    }
 }
 
