@@ -24,7 +24,7 @@ public class Listener {
         logger.info("topic_2 ====  kafka的value: " + record.value());
     }
 
-    @KafkaListener(topics = {"topic_3"})
+    @KafkaListener(topics = {"topic_3","topic_4"})
     public void listen_3(ConsumerRecord<?, ?> record) {
 
         logger.info("topic_3 ====  kafka的value: " + record.value());
